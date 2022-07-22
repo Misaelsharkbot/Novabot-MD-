@@ -9221,9 +9221,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "𝚐𝚛𝚞𝚙𝚘𝚜",
+								"title": "crédit",
 								"rows": [
 									{
+									    "title": "crédito",
+										"description": "muestra los créditos del bot!!",
+										"rowId": `${prefix}credit`
+                                   		},
+										{
 										"title": "𝚐𝚛𝚞𝚙𝚘𝚜",
 										"description": "𝚕𝚒𝚜𝚝𝚊 𝚍𝚎 𝚐𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚌 𝚍𝚎𝚕 𝚋𝚘𝚝!!",
 										"rowId": `${prefix}grupos`
@@ -10511,6 +10516,129 @@ await XeonBotInc.send5ButImg(from, `┌────「 𝐈𝐌𝐅𝐎𝐑𝐌�
 ┊🔰 ${prefix}request
 ┊🔰 ${prefix}report [bug]
 └───────────●` + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Grupos 🔰","id": 'grupos'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+break
+case 'explicacion':
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+var unicorn = await getBuffer(picak+'explicacion')
+await XeonBotInc.send5ButImg(from, `┌──── Hola! ${pushname} 👋 aqui las explicaciones del menu completo del bot
+└───────────●\n\n┏━━⦿ _*INFO*_
+┃ 🔸${prefix}creador (Numero del creador)
+┃ 🔸️${prefix}creditos (Colaboradores del bot)
+┃ 🔸${prefix}donar (Info donar)
+┃ 🔸️${prefix}speed (Velocidad)
+┃ 🔸${prefix}runtime (Tiempo activo)
+┗⦿
+┏━━⦿ _*FUN*_
+┃ 🔸️${prefix}simi (Hablar con el bot)
+┃ 🔸️${prefix}topgay (Lista gays del grupo)
+┃ 🔸${prefix}tophetero (Lista heteros del grupo)
+┃ 🔸️${prefix}match (Foto perfil parejas)
+┗⦿
+┏━━⦿ _*STICKER*_
+┃ 🔸️${prefix}s/sticker (Crear sticker)
+┃ 🔸️${prefix}robar (Robar sticker)
+┃ 🔸️${prefix}dado (Sticker dado al azar)
+┃ 🔸️${prefix}toimg (sticker a imagen)
+┃ 🔸${prefix}emoji (Emoji grande)
+┗⦿
+┏━━⦿ _*IMAGENES*_
+┃ 🔸️${prefix}badgirl (Foto badgirl)
+┃ 🔸️${prefix}muslos (Foto muslos)
+┃ 🔸️${prefix}brasil (Foto brasilgirl)
+┃ 🔸${prefix}vietnam (Foto vietnamgirl)
+┃ 🔸️${prefix}tailandia (Foto tailandiagirl)
+┃ 🔸️${prefix}indonesia (Foto indonesiagirl)
+┃ 🔸${prefix}corea (Foto coreagirl)
+┃ 🔸️${prefix}japon (Foto japongirl)
+┃ 🔸️${prefix}megumin (Foto megumin)
+┃ 🔸️${prefix}anime (Foto anime)
+┃ 🔸️${prefix}loli (Foto loli)
+┃ 🔸️${prefix}doge (Foto doge)
+┃ 🔸️${prefix}waifu (Foto waifu)
+┃ 🔸️${prefix}husbu (Foto husbando)
+┃ 🔸${prefix}milf (Foto milf)
+┃ 🔸️${prefix}cosplay (Foto cosplay)
+┃ 🔸️${prefix}wallml (Foto wallpaper)
+┗⦿
+┏━━⦿ _*DESCARGA*_
+┃ 🔸️${prefix}play (Descarga musica o video)
+┃ 🔸️${prefix}tiktokdl (Descargar video de tiktok)
+┃ 🔸️${prefix}igdl (Descargar video de instagram)
+┃ 🔸️${prefix}lyrics (Letra de cancion)
+┃ 🔸️${prefix}pinterest (Imagen pinterest)
+┃ 🔸️${prefix}playstore (Apps de playstore en link)
+┃ 🔸️${prefix}imagen (Imagen en google)
+┃ 🔸️${prefix}ytsearch (Buscador de youtube)
+┗⦿
+┏━━⦿ _*CONVERTIDOR*_
+┃ 🔸${prefix}tomp4 (Sticker a video)
+┃ 🔸️${prefix}tourl (Media a url)
+┃ 🔸${prefix}tomp3 (Video a mp3)
+┃ 🔸️${prefix}fast (Video rapido)
+┃ 🔸${prefix}slow (Video lento)
+┃ 🔸️${prefix}reverse (Video reversa)
+┃ 🔸️${prefix}vnsecond (Cambiar segundo de audio)
+┃ 🔸️${prefix}vidsecond (cambiar segundos de video)
+┗⦿
+┏━━⦿ _*GRUPO*_
+┃ 🔸${prefix}tagall (Menciona a todos los miembros)
+┃ 🔸️${prefix}antilink (Antilink)
+┃ 🔸️${prefix}listonline (Miembros online de grupo)
+┃ 🔸️${prefix}q (Mensaje respondido)
+┃ 🔸${prefix}kick (Eliminar miembro)
+┃ 🔸️${prefix}add (Añadir miembro a grupo)
+┃ 🔸️${prefix}getbio (Descripcion de usuario)
+┃ 🔸️${prefix}getname (Nombre de usuario)
+┃ 🔸️${prefix}infogrupo (Informacion del grupo)
+┃ 🔸️${prefix}grupo (Opciones de grupo)
+┃ 🔸${prefix}nsfw (Activa fotos +18)
+┃ 🔸️${prefix}sticktag (Sticker menciona a miembros)
+┃ 🔸️${prefix}totag (Media menciona a miembros)
+┃ 🔸${prefix}hidetag (Mencion de usuarios en texto)
+┃ 🔸️${prefix}contag (Contacto meciona a miembros)
+┗⦿
+┏━━⦿ _*nsfw*_
+┃ 🔸️${prefix}awoo (Foto furry)
+┃ 🔸️${prefix}blowjob (Foto cumshot)
+┃ 🔸️${prefix}hentai (Foto hentai)
+┃ 🔸️${prefix}neko (Foto neko)
+┃ 🔸️${prefix}trapnime (Foto trapo)
+┗⦿
+┏━━⦿ _*OWNER*_
+┃ 🔸️${prefix}bc (Mensaje a usuarios)
+┃ 🔸${prefix}ban (Ban usuario)
+┃ 🔸️${prefix}unban (Desbanear usuario)
+┃ 🔸️${prefix}banchat (Banea al bot de un grupo)
+┃ 🔸️${prefix}unbanchat (Desbanea al bot de un grupo)
+┃ 🔸️${prefix}listbanchat (Lista de baneados)
+┃ 🔸️${prefix}addcmd (Añadir sticker comando)
+┃ 🔸️${prefix}delcmd (Eliminar stticker comando)
+┃ 🔸️${prefix}listcmd (Lista de cmd activos)
+┃ 🔸${prefix}modo (Modo opciones)
+┃ 🔸️${prefix}anticall (anticall)
+┃ 🔸️${prefix}setprefix (Elejir prefijo)
+┃ 🔸${prefix}antidelete (Sin eliminacion)
+┃ 🔸${prefix}welcome (Bienvenida)
+┃ 🔸️${prefix}restart (Reinicia el bot)
+┃ 🔸️${prefix}join (Ingresar bot a grupo)
+┃ 🔸️${prefix}inspect (Revisar un grupo)
+┗⦿ `+ '' + '' + ' ', `${botname}`,unicorn, [{"urlButton": {"displayText": "YouTube 📍","url": `${websitex}`}},{"urlButton": {"displayText": "Script🔖","url": `${botscript}`}},{"quickReplyButton": {"displayText": "Grupos 🔰","id": 'grupos'}},{"quickReplyButton": {"displayText": "Owner 👤","id": 'owner'}}] )
+break
+case 'credit': 
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`┌──── hola  ${pushname} ✨ esto sos los que ayudaron al bot 
+gitbub del bot:
+
+https://github.com/elrebelde21/pruebabot
+
+agracimiento al
+
+https://github.com/Misaelsharkbot
+
+https://github.com/Bottiocarlos
+└───────────●`)
 break
 case 'grupos': 
 	   if (isBan) return reply(mess.ban)
