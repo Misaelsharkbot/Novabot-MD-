@@ -8109,16 +8109,24 @@ let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let buf = await getBuffer(anu.thumbnail)
 let caption = `
-       ⟮ _*💎𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝚖𝚞𝚜𝚒𝚌💎*_ ⟯ 
-   
-      0.02━◉━━━━━━━━━━━━3.26
-          🔂   ⏪   ⏸️     ⏩  🎵
-
-*◉ 𝚃𝚒𝚝𝚞𝚕𝚘 :* ${anu.title}
-*◉ 𝙿𝚎𝚜𝚘 :* ${anu.filesize}
-*◉ 𝚄𝚁𝙻 :* ${anu.url}
-*◉ 𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘𝚗 :* ${anu.description}
-`
+❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
+├‣ *𝚃𝚒𝚝𝚞𝚕𝚘* : 
+┴
+${anu.title}
+┬
+├‣ *𝙿𝚎𝚜𝚘* : 
+┴
+ ${anu.filesize}
+┬
+├‣ *𝙳𝚞𝚛𝚊𝚌𝚒𝚘𝚗* : 
+┴
+${anu.timestamp}
+┬
+├‣ *Link* :
+┴
+${anu.url}
+┬
+❒═════════════════╾❒`
 message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { upload:   XeonBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 templateMessage: {
@@ -8490,6 +8498,12 @@ descarga Media, haga clip algunos de los botones a continuación ytmp3/ytmp4 con
 		XeonBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
+case 'dado':
+if (isBanned) return  reply(mess.banned)
+			random = Math.floor(Math.random() * 6) + 1
+		damdu = fs.readFileSync(`./sticker/${random}.webp`)
+			XeonBotInc.sendMessage(from, damdu, sticker, {quoted: mek})
+			break
 case 'tempo': {
 if (isBan) return reply(mess.ban)
 if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)

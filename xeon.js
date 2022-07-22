@@ -71,7 +71,7 @@ async function startXeonBotInc() {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let xeonfek = await XeonBotInc.sendContact(callerId, global.owner)
-    XeonBotInc.sendMessage(callerId, { text: `𝘕𝘰 𝘭𝘭𝘢𝘮𝘢𝘳 𝘢𝘭 𝘣𝘰𝘵!\n𝘴𝘦𝘳𝘢𝘴 𝘣𝘭𝘰𝘲𝘶𝘦𝘢𝘥𝘰 𝘩𝘢𝘣𝘭𝘢 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘳𝘦𝘢𝘥𝘰𝘳 𝘱𝘢𝘳𝘢 𝘵𝘶 𝘥𝘦𝘴𝘣𝘢𝘯𝘦𝘰!`}, { quoted : xeonfek })
+    XeonBotInc.sendMessage(callerId, { text: `no llama!\n'usted seda bloqueado automáticamente por llamar al bot!\nmanda ayuda al owner`}, { quoted : xeonfek })
     await sleep(8000)
     await XeonBotInc.updateBlockStatus(callerId, "block")
     }
@@ -104,15 +104,15 @@ async function startXeonBotInc() {
        }
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚌𝚎𝚛𝚛𝚊𝚍𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚌𝚎𝚛𝚛𝚊𝚍𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
        } else if(pea[0].announce == false) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == true) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙻𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚛𝚎𝚜𝚝𝚛𝚒𝚗𝚐𝚒𝚍𝚊, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙻𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚛𝚎𝚜𝚝𝚛𝚒𝚗𝚐𝚒𝚍𝚊, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == false) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐆𝐑𝐔𝐏𝐎 」\n\n𝚂𝚎 𝚑𝚊 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝚂𝚎 𝚑𝚊 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
        } else {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚊𝚜𝚞𝚗𝚝𝚘 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚜𝚎 𝚑𝚊 𝚌𝚊𝚖𝚋𝚒𝚊𝚍𝚘 𝚊 *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚊𝚜𝚞𝚗𝚝𝚘 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚜𝚎 𝚑𝚊 𝚌𝚊𝚖𝚋𝚒𝚊𝚍𝚘 𝚊 *${pea[0].subject}*`, `${botname}`, lolXeon, [])
      }
     })
     
@@ -153,8 +153,8 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
-                const xtime = moment.tz('America/Los_Angeles').format('HH:mm:ss')
-	            const xdate = moment.tz('America/Los_Angeles').format('DD/MM/YYYY')
+                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `┌─❖
@@ -192,8 +192,8 @@ mediaUrl: `${websitex}`
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                 } else if (anu.action == 'remove') {
                 	const xeonbuffer = await getBuffer(ppuser)
-                    const xeontime = moment.tz('America/Los_Angeles').format('HH:mm:ss')
-	                const xeondate = moment.tz('America/Los_Angeles').format('DD/MM/YYYY')
+                    const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
