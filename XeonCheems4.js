@@ -237,7 +237,6 @@ const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
 const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiToxic = m.isGroup ? nttoxic.includes(from) : false
-const Antiarabes = m.isGroup ? narabes.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
 const isAutoStick = _autostick.includes(from)
@@ -286,7 +285,7 @@ if (!('templateVideo' in setting)) setting.templateVideo = false
 		if (!('templateDocument' in setting)) setting.templateDocument = true
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
+		autobio: true,
 		templateImage: false,
 		templateVideo: false,
 		templateGif: false,
@@ -602,27 +601,6 @@ await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
 XeonBotInc.sendMessage(from, {text:`\`\`\`「 LINK DETENTADO 」\`\`\`\n\n@${kice.split("@")[0]} Has enviado un link y no esta permite rata seda explusado del grupo`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
-//antiarabes\\
-let handler = m => m 
-handler.before = async function (m) {
-   if (m.sender.startsWith('212' || '212')) {
-   	global.db.data.users[m.sender].banned = true
-conn.reply('see u next time')
-conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-   }  
-   if (m.sender.startsWith('92' || '92')) {
-   	global.db.data.users[m.sender].banned = true
-conn.reply('see u next time')
-conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-   }
-   if (m.sender.startsWith('265' || '265')) {
-   	global.db.data.users[m.sender].banned = true
-conn.reply('see u next time')
-conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-   } 
-    }
-export default handler
-  }
 //antivirtex 
   if (antiVirtex) {
   if (budy.length > 3500) {
