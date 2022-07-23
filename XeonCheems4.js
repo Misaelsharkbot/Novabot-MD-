@@ -498,7 +498,7 @@ jumlahharian = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await XeonBotInc.setStatus(`${PRUEBABOT} | Runtime : ${runtime(uptime)}`)
+		await XeonBotInc.setStatus(`PRUEBABOT | Runtime : ${runtime(uptime)}`)
 		setting.status = new Date() * 1
 	    }
 	}
