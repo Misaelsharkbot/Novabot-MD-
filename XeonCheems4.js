@@ -499,7 +499,7 @@ jumlahharian = `${dataa.value}`
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await XeonBotInc.setStatus(`${XeonBotInc.user.name} | Runtime : ${runtime(uptime)}`)
+		await XeonBotInc.setStatus(`${PRUEBABOT} | Runtime : ${runtime(uptime)}`)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -603,29 +603,24 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 LINK DETENTADO 」\`\`\`\n\n@${kic
 } else {
 }
 //antiarabes\\
-let handler = m => m
-
+let handler = m => m 
 handler.before = async function (m) {
    if (m.sender.startsWith('212' || '212')) {
    	global.db.data.users[m.sender].banned = true
 conn.reply('see u next time')
 conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-   }
-   
-
+   }  
    if (m.sender.startsWith('92' || '92')) {
    	global.db.data.users[m.sender].banned = true
 conn.reply('see u next time')
 conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
    }
-
    if (m.sender.startsWith('265' || '265')) {
    	global.db.data.users[m.sender].banned = true
 conn.reply('see u next time')
 conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
    } 
     }
-
 export default handler
   }
 //antivirtex 
