@@ -466,7 +466,12 @@ const reply = (teks) => {
         if (!XeonBotInc.public) {
             if (!m.key.fromMe) return
         }
-
+	    
+        //antiarabes\\
+	 if (m.sender.startsWith('258' || '92' || '91' || '357' || '359' || '91' || '234' || '212' || '213' || '233' || '258' || '297' || '350')) {
+if (!AntiArabe) return
+XeonBotinc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+}
         //Push Message To Console && Auto Read\\
         if (m.message) {
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
