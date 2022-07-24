@@ -2413,8 +2413,8 @@ if (isBanChat) return reply(mess.banChat)
                	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
-            if (m.chat in vote) replay(`_There Are Still Votes In This Chat!_\n\n*${prefix}delvote* - To Delete Vote Session`)
-            if (!text) return replay(`Enter Reason For Vote, Example: *${prefix + command} Handsome Owner*`)
+            if (m.chat in vote) replay(`_¡Aún hay votos en este chat!_\n\n*${prefix}delvote* - Para eliminar la sesión de votación`)
+            if (!text) return replay(`Ingrese el motivo del voto, ejemplo: *${prefix + command} Propietario guapo*`)
             reply(`Voting Starts!\n\n*${prefix}upvote* - For Upvote\n*${prefix}devote* - For Devote\n*${prefix}checkvote* - To Check The Vote\n*${prefix}delvote* - To Delete Vote Session`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
@@ -2422,7 +2422,7 @@ if (isBanChat) return reply(mess.banChat)
             devote = vote[m.chat][2]
             teks_vote = `*「 VOTE 」*
 
-*Reason:* ${vote[m.chat][0]}
+*Motivo:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
