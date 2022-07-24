@@ -466,12 +466,7 @@ const reply = (teks) => {
         if (!XeonBotInc.public) {
             if (!m.key.fromMe) return
         }
-	    
-        //antiarabes\\
-	 if (m.sender.startsWith('258' || '92' || '91' || '357' || '359' || '91' || '234' || '212' || '213' || '233' || '258' || '297' || '350')) {
-if (!AntiArabe) return
-XeonBotinc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-}
+
         //Push Message To Console && Auto Read\\
         if (m.message) {
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
@@ -3167,9 +3162,9 @@ replay(mess.success)
 break
 break
  case 'tts':
-  const gtts = require('./gtts')(args[0])
-  if (args.length < 1) return mediaInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
-  if (args.length < 2) return mediaInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+  const gtts = require('./src/gtts')(args[0])
+  if (args.length < 1) return XeonBotInc.sendMessage(from, `Ejemplo: ${prefix}es Hola`, text, {quoted: m})
+  if (args.length < 2) return XeonBotInc.sendMessage(from, `Ejemplo: ${prefix}es Hola`, text, {quoted: m})
  var dtt = body.slice(20)
   reply(mess.wait)
   var ranm = getRandom('.mp3')
@@ -3180,8 +3175,8 @@ break
           fs.unlinkSync(ranm)
           buffer = fs.readFileSync(rano)
           if (err) return reply('error')
-          Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
-          mediaInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+          Ruri.sendMessage(from,  audio, {quoted: m, ptt:true})
+          XeonBotInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: m})
           fs.unlinkSync(rano)
           })
           })
@@ -8909,6 +8904,78 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 reply(respon)
             }
             break
+break
+case 'estado': case 'infobot': case 'estadobot': case 'status': case 'estadodelbot': case 'botinfo': {
+	if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+                const used = process.memoryUsage()
+                const cpus = os.cpus().map(cpu => {
+                    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
+			        return cpu
+                })
+                const cpu = cpus.reduce((last, cpu, _, { length }) => {
+                    last.total += cpu.total
+                    last.speed += cpu.speed / length
+                    last.times.user += cpu.times.user
+                    last.times.nice += cpu.times.nice
+                    last.times.sys += cpu.times.sys
+                    last.times.idle += cpu.times.idle
+                    last.times.irq += cpu.times.irq
+                    return last
+                }, {
+                    speed: 0,
+                    total: 0,
+                    times: {
+			            user: 0,
+			            nice: 0,
+			            sys: 0,
+			            idle: 0,
+			            irq: 0
+                }
+                })
+                let timestamp = speed()
+                let latensi = speed() - timestamp
+                neww = performance.now()
+                oldd = performance.now()
+teks =  `┏━━━━❰･𝐄𝐒𝐓𝐀𝐃𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓･❱━━━━
+┃
+┃웃 Hola  ${pushname}  este es el estado del BOT
+┃
+┃╍╍╍╍╍╍╍╍╍╍╍╍╍
+┃
+┃➢ 𝚅𝙴𝙻𝙾𝙲𝙸𝙳𝙰𝙳 : ${oldd - neww} segundos
+┃
+┃➢ 𝙰𝙲𝚃𝙸𝚅𝙾: ${runtime(process.uptime())}
+┃
+┃ ➢ 𝚁𝙰𝙼 𝙳𝙴𝙻 𝚂𝙴𝚁𝚅𝙸𝙳𝙾𝚁: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+┃
+┃➢ 𝙿𝙻𝙰𝚃𝙰𝙵𝙾𝚁𝙼𝙰 : ${os.platform()}
+┃
+┃➢𝙻𝙸𝙱𝚁𝙴𝚁𝙸𝙰: Bailey MD
+┃
+┗━━━━━━━━━━━━━`
+let buttons = [
+{buttonId: `ping`, buttonText: {displayText: '𝙼𝙰𝚂 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲𝙸𝙾𝙽 🪫'}, type: 1}
+]
+let buttonMessage = {
+image: thum,
+jpegThumbnail: log0,
+caption: teks,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title:"𝘐𝘔𝘍𝘖𝘙𝘔𝘈𝘊𝘐𝘖𝘕 𝘈𝘊𝘌𝘙𝘊𝘈 𝘋𝘌𝘓 𝘉𝘖𝘛",
+body: "Click para entrar", 
+thumbnail: fs.readFileSync("media/theme/cheemspic.jpg"),
+mediaType:1,
+mediaUrl: 'https://telegra.ph/file/02f5bee86b49824325d45.jpg',
+sourceUrl: "https://telegra.ph/file/02f5bee86b49824325d45.jpg"
+}}
+}
+XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+           break
             case 'speedtest': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
