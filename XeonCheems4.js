@@ -8924,14 +8924,14 @@ teks =  `┏━━━━❰･𝐄𝐒𝐓𝐀𝐃𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓
 ┃╍╍╍╍╍╍╍╍╍╍╍╍╍
 ┃
 ┃➢ 𝚅𝙴𝙻𝙾𝙲𝙸𝙳𝙰𝙳 : ${oldd - neww} segundos
-┃
-┃➢ 𝙰𝙲𝚃𝙸𝚅𝙾: ${runtime(process.uptime())}
-┃
-┃ ➢ 𝚁𝙰𝙼 𝙳𝙴𝙻 𝚂𝙴𝚁𝚅𝙸𝙳𝙾𝚁: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-┃
+┃➢ 𝚁𝙰𝙼 𝙳𝙴𝙻 𝚂𝙴𝚁𝚅𝙸𝙳𝙾𝚁: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 ┃➢ 𝙿𝙻𝙰𝚃𝙰𝙵𝙾𝚁𝙼𝙰 : ${os.platform()}
-┃
-┃➢𝙻𝙸𝙱𝚁𝙴𝚁𝙸𝙰: Bailey MD
+┃➢ 𝙰𝙲𝚃𝙸𝚅𝙾: ${runtime(process.uptime())}
+┃➢ 𝙼𝙾𝙳𝙾: publico
+┃➢ 𝙻𝙸𝙱𝚁𝙴𝚁𝙸𝙰: Bailey MD
+┃➢  𝙶𝚁𝚄𝙿𝙾𝚂 𝙱𝙰𝙽𝙴𝙰𝙳𝙾𝚂: ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}
+┃➢ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝙱𝙰𝙽𝙴𝙰𝙳𝙾𝚂: ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}
+┃➢ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝚃𝙾𝚃𝙰𝙻𝙴𝚂:${Object.keys(global.db.data.users).length}
 ┃
 ┗━━━━━━━━━━━━━`
 let buttons = [
