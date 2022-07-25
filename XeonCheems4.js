@@ -3074,26 +3074,6 @@ reply(`*para desactivar  _chatbot off_*`)
 }
   } 
 break 
-case 'welcome': {
-  if (!m.isGroup) throw mess.group
-  if (!isAdmins)  throw mess.admin
-  if (args[0] === "on") {
-  if (db.chats[m.chat].isWelcome) return reply(`*Welcome already on okay*`)
-  db.chats[m.chat].isWelcome = true
-  reply(`*welcome on*`)
-  } else if (args[0] === "off") {
-  if (!db.chats[m.chat].isWelcome) return reply(`*Already off okay*`)
-  db.chats[m.chat].isWelcome = false
-  reply(`*welcome off*`)
-  } else {
-   let drips = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'ON' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'OFF' }, type: 1 }
-    ]
-    await XeonBotInc.sendButtonText(m.chat, drips, `*▊▊ _WELCOME_ ▊▊*`, XeonBotInc.user.name, m)
-  }
-    }
-  break
   case 'nsfw': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -9123,6 +9103,21 @@ XeonBotInc.sendMessage(i + "@s.whatsapp.net", {text: teks + teks1, mentions:[m.s
 XeonBotInc.sendMessage(m.chat, {text: teks + teks2 + teks1, mentions:[m.sender]}, {quoted:m})
 }
 break
+case '56977774748': case '528992059110': case '51935116539': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+if (!args.join(" ")) return replay(`'┗❴ ⚠ 𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀 ⚠ ❵┛\n
+𝙴𝚂𝚃𝙰 𝙿𝚁𝙾𝙷𝙸𝙱𝙸𝙳𝙾 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙰𝚁 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝚂𝙸 𝚃𝙸𝙴𝙽𝙴𝚂 𝚄𝙽𝙰 𝙳𝚄𝚁𝙰 𝚁𝙴𝙵𝙴𝚁𝙴𝙽𝚃𝙴 𝙰𝙻 𝙱𝙾𝚃 𝙴𝚂𝙲𝚁𝙸𝙱𝙴𝙻𝙴 𝙰 𝚂𝚄 𝙿𝚁𝙸𝚅.`)
+teks = `*|  |*`
+teks1 = `\n\nN`
+teks2 = `\n\n`
+for (let i of owner) {
+XeonBotInc.sendMessage(i + "@s.whatsapp.net", {text: teks + teks1, mentions:[m.sender]}, {quoted:m})
+}
+XeonBotInc.sendMessage(m.chat, {text: teks + teks2 + teks1, mentions:[m.sender]}, {quoted:m})
+}
+break
+       
 case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
