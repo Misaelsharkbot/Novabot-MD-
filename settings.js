@@ -39,7 +39,7 @@ global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['56977774748'] //numero del owner
-global.ownername = "creador" //nombre
+global.ownername = "░▒▓█►─═ 𝓝𝓸𝓿𝓪𝓫𝓸𝓽-ℳ𝓓 ═─◄█▓▒░" //nombre
 global.ytname = "loli" //canal de Youtube 
 global.socialm = "GitHub: " //github
 global.location = "argentina" //lugar
@@ -65,14 +65,14 @@ global.location3 = "España" //lugar
 //bot bomdy 
 global.owner = ['56977774748' , '51935116539']
 global.ownertag = '447441419651' //ur tag number
-global.botname = '𝓢𝓤𝓟𝓔𝓡𝓑𝓞𝓣-𝓜𝓓' //ur bot name
+global.botname = '𝐍𝐨𝐯𝐚𝐛𝐨𝐭-𝐌𝐃' //ur bot name
 global.linkz = "https://youtu.be/WiIqCdiDjFo" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtu.be" //ur website to be displayed
 global.botscript = 'https://github.com' //script link
 global.reactmoji = "😎" //ur menu react emoji
 global.themeemoji = "💎" //ur theme emoji
 global.packname = "𝘚𝘛𝘐𝘊𝘒𝘌𝘙  𝘉𝘠" //ur sticker watermark packname
-global.author = "𝓢𝓤𝓟𝓔𝓡𝓑𝓞𝓣-𝓜𝓓" //ur sticker watermark author
+global.author = "𝓝𝓸𝓿𝓪𝓫𝓸𝓽-ℳ𝓓" //ur sticker watermark author
 
 //Bot theme media
 global.thum = fs.readFileSync("./media/theme/cheemspic.jpg") //ur thumb pic
