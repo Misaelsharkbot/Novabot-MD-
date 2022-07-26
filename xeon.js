@@ -1,7 +1,7 @@
 //════════════════════════════//
-//Si van edita/agrega algo
-//Por favor de
-//Deja crédito
+//si van edita/agrega 
+//algo por favor 
+//de deja crédito 
 //════════════════════════════//
 
 require('./settings')
@@ -71,7 +71,7 @@ async function startXeonBotInc() {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let xeonfek = await XeonBotInc.sendContact(callerId, global.owner)
-    XeonBotInc.sendMessage(callerId, { text: `no llama!\n'usted seda bloqueado automáticamente por llamar al bot!\nmanda ayuda al owner`}, { quoted : xeonfek })
+    XeonBotInc.sendMessage(callerId, { text: `no llama!\n'usted seda bloqueado automáticamente por llamar al bot!\nmanda ayuda al owner!`}, { quoted : xeonfek })
     await sleep(8000)
     await XeonBotInc.updateBlockStatus(callerId, "block")
     }
@@ -104,15 +104,15 @@ async function startXeonBotInc() {
        }
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚌𝚎𝚛𝚛𝚊𝚍𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚌𝚎𝚛𝚛𝚊𝚍𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜 !`, `${botname}`, lolXeon, [])
        } else if(pea[0].announce == false) {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎𝚜!`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚙𝚘𝚛 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚗𝚟𝚒𝚊𝚛 𝚖𝚎𝚗𝚜𝚊𝚓𝚎!`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == true) {
        XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙻𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚑𝚊 𝚜𝚒𝚍𝚘 𝚛𝚎𝚜𝚝𝚛𝚒𝚗𝚐𝚒𝚍𝚊, ¡𝚊𝚑𝚘𝚛𝚊 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛 𝚙𝚞𝚎𝚍𝚎 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == false) {
        XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝚂𝚎 𝚑𝚊 𝚊𝚋𝚒𝚎𝚛𝚝𝚘 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘, ¡𝚊𝚑𝚘𝚛𝚊 𝚕𝚘𝚜 𝚙𝚊𝚛𝚝𝚒𝚌𝚒𝚙𝚊𝚗𝚝𝚎𝚜 𝚙𝚞𝚎𝚍𝚎𝚗 𝚎𝚍𝚒𝚝𝚊𝚛 𝚕𝚊 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚌𝚒ó𝚗 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘!`, `${botname}`, lolXeon, [])
        } else {
-       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚊𝚜𝚞𝚗𝚝𝚘 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚜𝚎 𝚑𝚊 𝚌𝚊𝚖𝚋𝚒𝚊𝚍𝚘 𝚊 *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n𝙴𝚕 𝚊𝚜𝚞𝚗𝚝𝚘 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝚜𝚎 𝚑𝚊 𝚌𝚊𝚖𝚋𝚒𝚊𝚍𝚘 𝚊*${pea[0].subject}*`, `${botname}`, lolXeon, [])
      }
     })
     
@@ -149,7 +149,6 @@ let docs = pickRandom(documents)
 memb = metadata.participants.length
 XeonWlcm = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
 XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
-               .if (anu.action == "add" && mem.includes(XeonBotInc.user.jid)) 
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
@@ -158,10 +157,11 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `┌─❖
-│「 𝐇𝐎𝐋𝐀 👋 」
+│「 𝗛ola 👋 」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎 𝐀
+   │✑  bienvenido al  
    │✑  ${metadata.subject}
+   │✑ espero que la pase bien y leea la regla para no tener problema 
    └───────────────┈ ⳹`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
@@ -185,8 +185,8 @@ title: `${ownername}`,
 body: `No olvides leer la descripción del grupo`,
 mediaType:2,
 thumbnail: XeonWlcm,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
+sourceUrl: `https://youtu.be/AHl6gwvfgeg`,
+mediaUrl: `https://youtu.be/AHl6gwvfgeg`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
@@ -198,15 +198,16 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `┌─❖
-│「 𝐀𝐃𝐈𝐎𝐒 👋 」
+│「 adios 👋 」
 └┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝐒𝐄 𝐅𝐔𝐄
+   │✑  se fue
+   │✑ ${metadata.subject}
    └───────────────┈ ⳹`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'se fue un randow🧐'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'se fue un randow 🧐'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./media/theme/cheems.xlsx'),
@@ -224,8 +225,8 @@ title: `${ownername}`,
 body: `Esperemos que no vuelva -_-`,
 mediaType:2,
 thumbnail: XeonLft,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
+sourceUrl: `https://youtu.be/AHl6gwvfgeg`,
+mediaUrl: `https://youtu.be/AHl6gwvfgeg`
 }}
 }
 XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
@@ -235,7 +236,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
             console.log(err)
         }
     })
-
+	
     //Setting\\
     XeonBotInc.decodeJid = (jid) => {
         if (!jid) return jid
@@ -275,7 +276,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await XeonBotInc.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\nFN:${global.ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click para entrar\nitem2.EMAIL;type=INTERNET:${global.ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${global.socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await XeonBotInc.getName(i + '@s.whatsapp.net')}\nFN:${global.ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${global.ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${global.socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    	////////////////////////////////////////////////////////////vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:${botscript}\nitem2.X-ABLabel:Script\nitem3.URL:${websitex}\nitem3.X-ABLabel:Script\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
@@ -308,8 +309,8 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("‼️ conexión cerrada, reconectado...."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("‼️se perdio la conexión del servidor,, reconectado..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("‼️conexión cerrada, reconectado........"); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("‼️se perdio la conexión del servidor,, reconectado......"); startXeonBotInc(); }
             else if (reason === DisconnectReason.connectionReplaced) { console.log("‼️se replazo la conexión se abrio otra nueva session, primero cierre la session actual"); XeonBotInc.logout(); }
             else if (reason === DisconnectReason.loggedOut) { console.log(`‼️Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
             else if (reason === DisconnectReason.restartRequired) { console.log("‼️se requiere renicio, Reiniciado..."); startXeonBotInc(); }
