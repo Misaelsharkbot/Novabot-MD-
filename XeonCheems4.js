@@ -3055,6 +3055,26 @@ replay('antiwame desactivado con exito ✅')
   }
   }
   break
+case 'welcome': {
+  if (!m.isGroup) throw mess.group
+  if (!isAdmins)  throw mess.admin
+  if (args[0] === "on") {
+  if (db.chats[m.chat].isWelcome) return reply(`*Welcome already on okay*`)
+  db.chats[m.chat].isWelcome = true
+  reply(`*welcome on*`)
+  } else if (args[0] === "off") {
+  if (!db.chats[m.chat].isWelcome) return reply(`*Already off okay*`)
+  db.chats[m.chat].isWelcome = false
+  reply(`*welcome off*`)
+  } else {
+   let drips = [
+  { buttonId: `${command} on`, buttonText: { displayText: 'ON' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'OFF' }, type: 1 }
+    ]
+    await XeonBotInc.sendButtonText(m.chat, drips, `*▊▊ _WELCOME_ ▊▊*`, XeonBotInc.user.name, m)
+  }
+    }
+  break
 case 'chatbot': {
 if (!isCreator) throw mess.owner
 if (args[0] === "on") {
@@ -9064,9 +9084,9 @@ break
     }
                     break
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
-	if (isBan) return reply(mess.ban)	 			
+/*	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\ngracias 🍜`
+teks = `*「 ${global.botname} Script 」*\n\nGitHub: ${global.botscript}\n\n YouTube: ${global.websitex}\n\n link\n\n gracias 🍜`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
 ]
@@ -9078,15 +9098,19 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:"I deserve something for my hardwork",
-body: "Click to donate", 
+title:"𝘐𝘔𝘍𝘖𝘙𝘔𝘈𝘊𝘐𝘖𝘕 𝘈𝘊𝘌𝘙𝘊𝘈 𝘋𝘌𝘓 𝘉𝘖𝘛",
+body: "Click para entrar", 
 thumbnail: fs.readFileSync("media/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://telegra.ph/file/8737b098fd5702daeb7e0.jpg',
-sourceUrl: "https://telegra.ph/file/8737b098fd5702daeb7e0.jpg"
+mediaUrl: 'https://telegra.ph/file/02f5bee86b49824325d45.jpg',
+sourceUrl: "https://telegra.ph/file/02f5bee86b49824325d45.jpg"
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+*/
+   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+reply(`GitHub: ${global.botscript}`)
 }
 //agracimiento al confumods
 break
@@ -10712,7 +10736,11 @@ case 'credit':
 reply(`┌──── hola  ${pushname} ✨ esto sos los que ayudaron al bot 
 gitbub del bot:
 
-https://github.com/elrebelde21/pruebabot
+https://github.com/elrebelde21/Novabot-MD-
+
+YouTube
+
+https://youtube.com/channel/UC9b3UIVnVb5eQt7_Y-Qz-3A
 
 agracimiento al
 

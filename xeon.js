@@ -161,13 +161,13 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  bienvenido al  
    │✑  ${metadata.subject}
-   │✑ espero que la pase bien y leea la regla para no tener problema 
+   │✑ leer la regla para no tener problema ${metadata.desc}
    └───────────────┈ ⳹`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: '𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 🎇'}, type: 1}
+{buttonId: `.Doge Bot`, buttonText: {displayText: '𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 🎇'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./media/theme/cheems.xlsx'),
@@ -207,7 +207,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'se fue un randow 🧐'}, type: 1}
+{buttonId: `.Doge Bot`, buttonText: {displayText: 'se fue un randow 🧐'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./media/theme/cheems.xlsx'),
