@@ -88,7 +88,8 @@ pkg install ffmpeg -y
 pkg install wget
 pkg install imagemagick -y
 git clone https://github.com/elrebelde21/pruebabot
-cd pruebabot
+cd Novabot-MD
+yarn
 npm start
 ```
 
