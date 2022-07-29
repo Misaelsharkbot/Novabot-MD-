@@ -10765,7 +10765,10 @@ https://chat.whatsapp.com/DCJclB8oBAPIAoleUtNEaN
 
 ℂ𝔸𝕊𝕋𝕀ℕ𝔾 𝔻𝔼 𝕍𝕆ℤ (𝔹𝕆𝕋)
 https://chat.whatsapp.com/BMqdPDto6Uz5tFMMJVTrlO
-
+ 
+❖ Ƭʜᴇ| 🔱▪︎ＭＯ▽ＩΞ Ｗ✇ＲＬＤ▪︎🔱
+https://chat.whatsapp.com/C75TK13ByXPGXHMDzOCQFO
+ 
 si quiere que tu grupo aparezca aca habla con el owner de bot`)
 break
             default:
